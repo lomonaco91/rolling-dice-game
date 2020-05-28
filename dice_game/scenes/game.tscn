@@ -1,0 +1,280 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://assets/gameBG.jpg" type="Texture" id=1]
+[ext_resource path="res://fonts/nokiafc22.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://scripts/game.gd" type="Script" id=3]
+[ext_resource path="res://assets/incorrect.png" type="Texture" id=4]
+[ext_resource path="res://assets/correct.png" type="Texture" id=5]
+[ext_resource path="res://assets/logout.png" type="Texture" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 25
+outline_color = Color( 0.054902, 0.878431, 0.109804, 1 )
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 18
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+outline_color = Color( 0.25098, 0.94902, 0.0313726, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 13
+font_data = ExtResource( 2 )
+
+[node name="game" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="canvas_bg" type="CanvasLayer" parent="."]
+
+[node name="bg" type="Sprite" parent="canvas_bg"]
+position = Vector2( -59.4661, -157.892 )
+texture = ExtResource( 1 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="success" type="Label" parent="canvas_bg"]
+margin_left = 828.871
+margin_top = 11.0387
+margin_right = 968.871
+margin_bottom = 51.0387
+custom_fonts/font = SubResource( 1 )
+text = "Acertos: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="gameTotal" type="Label" parent="canvas_bg"]
+margin_left = 14.6872
+margin_top = 12.3311
+margin_right = 154.687
+margin_bottom = 52.3311
+custom_fonts/font = SubResource( 1 )
+text = "TOTAL:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="errors" type="Label" parent="canvas_bg"]
+margin_left = 828.707
+margin_top = 68.9402
+margin_right = 968.707
+margin_bottom = 108.94
+custom_fonts/font = SubResource( 1 )
+text = "Erros:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="round" type="Label" parent="canvas_bg"]
+margin_left = 829.036
+margin_top = 124.559
+margin_right = 969.036
+margin_bottom = 164.559
+rect_pivot_offset = Vector2( 0, 20 )
+custom_fonts/font = SubResource( 1 )
+text = "Rodada:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sortText" type="Label" parent="canvas_bg"]
+margin_left = 352.013
+margin_top = 210.046
+margin_right = 668.013
+margin_bottom = 250.046
+rect_pivot_offset = Vector2( 0, 20 )
+custom_fonts/font = SubResource( 1 )
+text = "O valor sorteado foi:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="valueSumText" type="Label" parent="canvas_bg"]
+margin_left = 350.721
+margin_top = 308.265
+margin_right = 666.721
+margin_bottom = 348.265
+rect_pivot_offset = Vector2( 0, 20 )
+custom_fonts/font = SubResource( 1 )
+text = "A soma é igual a?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="roleDiceText" type="Label" parent="canvas_bg"]
+margin_left = 352.013
+margin_top = 260.448
+margin_right = 668.013
+margin_bottom = 300.448
+rect_pivot_offset = Vector2( 0, 20 )
+custom_fonts/font = SubResource( 1 )
+text = "O valor rolado do dado foi:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="successPoints" type="Label" parent="canvas_bg"]
+margin_left = 962.745
+margin_top = 11.8883
+margin_right = 996.745
+margin_bottom = 43.8883
+custom_fonts/font = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="gameTotalPoints" type="Label" parent="canvas_bg"]
+margin_left = 137.0
+margin_top = 13.0
+margin_right = 197.0
+margin_bottom = 45.0
+custom_fonts/font = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="errorsPoints" type="Label" parent="canvas_bg"]
+margin_left = 935.127
+margin_top = 70.3318
+margin_right = 969.127
+margin_bottom = 102.332
+custom_fonts/font = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sortValue" type="Label" parent="canvas_bg"]
+margin_left = 689.258
+margin_top = 210.234
+margin_right = 723.258
+margin_bottom = 242.234
+custom_fonts/font = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="roundTime" type="Label" parent="canvas_bg"]
+margin_left = 962.127
+margin_top = 125.332
+margin_right = 996.127
+margin_bottom = 157.332
+custom_fonts/font = SubResource( 1 )
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="roleDiceValue" type="Label" parent="canvas_bg"]
+margin_left = 774.443
+margin_top = 261.445
+margin_right = 808.443
+margin_bottom = 293.445
+custom_fonts/font = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="roleDice" type="Button" parent="canvas_bg"]
+margin_left = 276.292
+margin_top = 490.823
+margin_right = 427.292
+margin_bottom = 562.823
+custom_fonts/font = SubResource( 4 )
+text = "Rolar Dado"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="checkValue" type="Button" parent="canvas_bg"]
+margin_left = 676.922
+margin_top = 489.946
+margin_right = 827.922
+margin_bottom = 561.946
+custom_fonts/font = SubResource( 5 )
+text = "Verificar Valores"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sumValue" type="TextEdit" parent="canvas_bg"]
+margin_left = 630.0
+margin_top = 301.0
+margin_right = 679.0
+margin_bottom = 341.0
+custom_fonts/font = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="correctIMG" type="Sprite" parent="canvas_bg"]
+position = Vector2( 487.864, 336.949 )
+scale = Vector2( 0.573589, 0.565849 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="incorrectIMG" type="Sprite" parent="canvas_bg"]
+position = Vector2( 496.264, 345.059 )
+scale = Vector2( 0.507986, 0.510319 )
+texture = ExtResource( 4 )
+centered = false
+
+[node name="timerNewRound" type="Timer" parent="canvas_bg"]
+
+[node name="bonusLabel" type="Label" parent="canvas_bg"]
+margin_left = 207.538
+margin_top = 25.1694
+margin_right = 302.538
+margin_bottom = 47.1694
+custom_fonts/font = SubResource( 3 )
+text = "bônus: x"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bonusLabelValue" type="Label" parent="canvas_bg"]
+margin_left = 277.85
+margin_top = 24.6911
+margin_right = 323.85
+margin_bottom = 58.6911
+custom_fonts/font = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="timerGameOver" type="Timer" parent="canvas_bg"]
+
+[node name="exitGame" type="Button" parent="canvas_bg"]
+margin_left = 966.924
+margin_top = 530.246
+margin_right = 1028.92
+margin_bottom = 586.246
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="exitText" type="Label" parent="canvas_bg"]
+margin_left = 987.406
+margin_top = 582.852
+margin_right = 1035.41
+margin_bottom = 604.852
+text = "Sair"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="canvas_bg/roleDice" to="." method="_on_roleDice_pressed"]
+[connection signal="pressed" from="canvas_bg/checkValue" to="." method="_on_checkValue_pressed"]
+[connection signal="timeout" from="canvas_bg/timerNewRound" to="." method="_on_timerNewRound_timeout"]
+[connection signal="timeout" from="canvas_bg/timerGameOver" to="." method="_on_timerGameOver_timeout"]
+[connection signal="pressed" from="canvas_bg/exitGame" to="." method="_on_exitGame_pressed"]
